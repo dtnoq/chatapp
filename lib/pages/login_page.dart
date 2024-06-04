@@ -17,20 +17,25 @@ class LoginPage extends StatelessWidget {
   // login method
   void login(BuildContext context) async {
     // auth service
-        final authService = AuthService();
+    final authService = AuthService();
 
-  // try login
-  try {
-    await authService.signInWithEmailPassword(_emailController.text, _pwController.text,);
-}
+    // try login
+    try {
+      await authService.signInWithEmailPassword(
+        _emailController.text,
+        _pwController.text,
+      );
+    }
 
-  // catch any errors
-  catch (e) {
-    showDialog(context: context,
-    builder: (context) => AlertDialog(
-      title: Text(e.toString()),
-    ));
-}
+    // catch any errors
+    catch (e) {
+      showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          title: Text(e.toString()),
+        ),
+      );
+    }
   }
 
   @override
@@ -92,13 +97,12 @@ class LoginPage extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
-                  "Not a member? ",
+                Text("Not a member? ",
                     style: TextStyle(
                         color: Theme.of(context).colorScheme.primary)),
                 GestureDetector(
                   onTap: onTap,
-                  child: Text( 
+                  child: Text(
                     "Register now",
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
