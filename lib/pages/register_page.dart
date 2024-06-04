@@ -1,13 +1,19 @@
 import 'package:chatapp/components/my_button.dart';
 import 'package:chatapp/components/my_textfield.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class RegisterPage extends StatelessWidget {
   // email and pw text controllers
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _pwController = TextEditingController();
   final TextEditingController _confirmPwController = TextEditingController();
-  RegisterPage({super.key});
+  
+  // tap to go to register page
+  final void Function()? onTap;
+
+  RegisterPage({super.key,required this.onTap});
 
   // register method
   void register() {}
@@ -79,21 +85,24 @@ class RegisterPage extends StatelessWidget {
             // register now
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text("Already have an account? ",
-                style: TextStyle(color: Theme.of(context).colorScheme.primary)
-                ),
-                Text(
-                  "Login now", 
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Theme.of(context).colorScheme.primary),
+                  children: [
+                    Text("Already have an account? ",
+                    style: TextStyle(color: Theme.of(context).colorScheme.primary)
                     ),
+                    GestureDetector(
+                      onTap: onTap,
+                      child: Text(
+                        "Login now", 
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Theme.of(context).colorScheme.primary),
+                          ),
+                    ),
+                  ],
+                ),
               ],
-            ),
-          ],
+            ),          
         ),
-      ),
-    );
+      );
   }
 }
