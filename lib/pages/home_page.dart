@@ -17,6 +17,9 @@ final AuthService _authService = AuthService();
     return Scaffold(
       appBar: AppBar(
         title: const Text("Home"),
+        backgroundColor: Colors.transparent,
+        foregroundColor: Colors.grey,
+        elevation: 0,
         
       ),
       // AppBar
