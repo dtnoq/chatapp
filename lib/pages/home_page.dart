@@ -15,6 +15,7 @@ final AuthService _authService = AuthService();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar(
         title: const Text("Home"),
         backgroundColor: Colors.transparent,
