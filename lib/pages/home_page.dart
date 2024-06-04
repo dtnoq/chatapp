@@ -62,6 +62,7 @@ if (userData["email"] != _authService.getCurrentUser()!.email) {
       MaterialPageRoute(
         builder: (context) => ChatPage(
           receiverEmail: userData["email"],
+          receiverID: userData["uid"],
         ),
       ), // MaterialPageRoute
     );
