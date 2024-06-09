@@ -16,7 +16,7 @@ class LoginPage extends StatelessWidget {
 
   // login method
   void login(BuildContext context) async {
-    // auth service
+    // auth service 
     final authService = AuthService();
 
     // try login
@@ -56,7 +56,7 @@ class LoginPage extends StatelessWidget {
             const SizedBox(height: 50),
 
             // welcome back message
-            // welcome back message
+           
             Text(
               "Welcome back, you've been missed!",
               style: TextStyle(

@@ -30,10 +30,10 @@ class UserTile extends StatelessWidget {
 
             // user name
             Text(text),
-          ], // Row
+          ], 
         ),
-      ), // Container
+      ), 
     );
-    // GestureDetector
+    
   }
 }

@@ -23,6 +23,6 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: const AuthGate(),
       theme: Provider.of<ThemeProvider>(context).themeData,
-    ); // MaterialApp
+    );
   }
 }

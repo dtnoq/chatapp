@@ -107,7 +107,7 @@ void scrollDown() {
           _buildUserInput(),
         ],
       ),
-    ); // Scaffold
+    ); 
   }
 
   // build message list

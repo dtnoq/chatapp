@@ -25,16 +25,16 @@ class MyTextField extends StatelessWidget {
         decoration: InputDecoration(
           enabledBorder: OutlineInputBorder(
             borderSide: BorderSide(color: Theme.of(context).colorScheme.outline),
-          ), // OutlineInputBorder
+          ),
           focusedBorder: OutlineInputBorder(
             borderSide: BorderSide(color: Theme.of(context).colorScheme.primary),
-          ), // OutlineInputBorder
+          ),
           fillColor: Theme.of(context).colorScheme.secondary,
           filled: true,
           hintText: hintText,
           hintStyle: TextStyle(color: Theme.of(context).colorScheme.primary),
-        ), // InputDecoration
-      ), // TextField
-    ); // Padding
+        ),
+      ),
+    );
   }
 }

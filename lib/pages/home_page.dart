@@ -23,7 +23,7 @@ final AuthService _authService = AuthService();
         elevation: 0,
         
       ),
-      // AppBar
+     
     drawer: const MyDrawer(),
     body: _buildUserList(),
     );
@@ -68,7 +68,7 @@ if (userData["email"] != _authService.getCurrentUser()!.email) {
           receiverEmail: userData["email"],
           receiverID: userData["uid"],
         ),
-      ), // MaterialPageRoute
+      ), 
     );
   },
 );
